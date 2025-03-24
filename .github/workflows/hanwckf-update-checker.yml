@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: Update Checker
+name: hanwckf-update-checker
 
 env:
   REPO_URL: https://github.com/dailook/immortalwrt-mt798x
