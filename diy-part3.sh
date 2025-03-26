@@ -23,3 +23,22 @@
 sed -i '/printer/d' target/linux/mediatek/image/mt7986.mk
 sed -i 's/kmod-usb-net-rndis //g' target/linux/mediatek/image/mt7986.mk
 sed -i 's/ luci-app-samba4//g' target/linux/mediatek/image/mt7986.mk
+
+# 添加组播防火墙规则
+cat >> package/network/config/firewall/files/firewall.config <<EOF
+config rule
+        option name 'Allow-UDP-igmpproxy'
+        option src 'wan'
+        option dest 'lan'
+        option dest_ip '224.0.0.0/4'
+        option proto 'udp'
+        option target 'ACCEPT'        
+        option family 'ipv4'
+
+config rule
+        option name 'Allow-UDP-udpxy'
+        option src 'wan'
+        option dest_ip '224.0.0.0/4'
+        option proto 'udp'
+        option target 'ACCEPT'
+EOF
