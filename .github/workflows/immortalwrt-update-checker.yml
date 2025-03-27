@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: hanwckf-update-checker
+name: immortalwrt-update-checker
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
