@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part3.sh
-# Description: OpenWrt DIY script part 3 (After Update feeds)
+# File name: diy-part4.sh
+# Description: OpenWrt DIY script part 4 (After Update feeds)
 #
 # Copyright (c) 2019-2024 P3TERX <https://p3terx.com>
 #
@@ -18,11 +18,6 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
-
-# Remove print samba4
-sed -i '/printer/d' target/linux/mediatek/image/mt7986.mk
-sed -i 's/kmod-usb-net-rndis //g' target/linux/mediatek/image/mt7986.mk
-sed -i 's/ luci-app-samba4//g' target/linux/mediatek/image/mt7986.mk
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
