@@ -14,7 +14,7 @@ name: padavanonly-immortalwrt-update-checker
 
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
-  REPO_BRANCH: openwrt-24.10
+  REPO_BRANCH: master
 
 on:
   workflow_dispatch:
