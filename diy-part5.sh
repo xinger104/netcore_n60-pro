@@ -19,6 +19,7 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
+# 移除USB网络共享
 sed -i 's/kmod-usb-net-rndis //g' target/linux/mediatek/image/mt7986.mk
 
 # 添加组播防火墙规则
