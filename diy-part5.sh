@@ -19,12 +19,6 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
-# Remove print ksmbd wrtbwmon
-sed -i '/printer/d' target/linux/mediatek/image/mt7986.mk
-sed -i 's/kmod-usb-net-rndis //g' target/linux/mediatek/image/mt7986.mk
-sed -i '/ksmbd/d' target/linux/mediatek/image/mt7986.mk
-sed -i 's/luci-app-wrtbwmon //g' target/linux/mediatek/Makefile
-
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
 config rule
