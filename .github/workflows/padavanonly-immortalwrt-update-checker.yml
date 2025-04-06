@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: immortalwrt-update-checker
+name: padavanonly-immortalwrt-update-checker
 
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
