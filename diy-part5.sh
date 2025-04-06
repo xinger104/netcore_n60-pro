@@ -21,6 +21,7 @@
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
+
 config rule
         option name 'Allow-UDP-igmpproxy'
         option src 'wan'
