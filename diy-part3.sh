@@ -26,6 +26,7 @@ sed -i 's/ luci-app-samba4//g' target/linux/mediatek/image/mt7986.mk
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
+
 config rule
         option name 'Allow-UDP-igmpproxy'
         option src 'wan'
