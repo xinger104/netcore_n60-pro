@@ -20,11 +20,10 @@
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 # Remove print samba4
-sed -i 's/luci-app-usb-printer //g' target/linux/mediatek/image/mt7986.mk
-sed -i 's/luci-i18n-usb-printer-zh-cn //g' target/linux/mediatek/image/mt7986.mk
+sed -i '/printer/d' target/linux/mediatek/image/mt7986.mk
 sed -i 's/kmod-usb-net-rndis //g' target/linux/mediatek/image/mt7986.mk
 sed -i 's/ luci-app-samba4//g' target/linux/mediatek/image/mt7986.mk
-sed -i 's/luci-app-filetransfer //g' include/target.mk
+sed -i '/luci-app-filetransfer/d' include/target.mk
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
