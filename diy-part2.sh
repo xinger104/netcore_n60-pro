@@ -24,6 +24,7 @@ sed -i 's/ddns-scripts_aliyun //g' include/target.mk
 sed -i 's/ddns-scripts_dnspod //g' include/target.mk
 sed -i 's/luci-app-ddns //g' include/target.mk
 sed -i 's/luci-app-arpbind //g' include/target.mk
+sed -i 's/luci-app-filetransfer //g' include/target.mk
 sed -i 's/luci-app-vsftpd //g' include/target.mk
 sed -i 's/luci-app-ssr-plus //g' include/target.mk
 sed -i 's/luci-app-vlmcsd //g' include/target.mk
